@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+
 import '../widget/login.dart';
 import '../widget/register.dart';
 
@@ -17,29 +18,41 @@ class HomePage extends StatelessWidget {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            children:[
-              Image.asset('lib/assets/Illustration.jpg'),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Text("Welcome",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 36,
-                      color: Color(0xFFEF5858),
-                      ),
-                    ),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  const Text.rich(
-                    TextSpan(
-                      text: 'Hello', // default text style
-                      children: <TextSpan>[
-                        TextSpan(text: ' Lorem ipsum dolor sit amet ', style: TextStyle(color: Colors.grey,fontSize: 18,fontWeight: FontWeight.normal)),
-                      ],
-                    ),
-                  ),
+          children: [
+            SizedBox(
+                width: 200,
+                height: 200,
+                child: Image.asset(
+                  'lib/assets/Illustration.jpg',
+                  fit: BoxFit.cover,
+                )),
+            SizedBox(
+              height: 40,
+            ),
+            Text(
+              "Welcome",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 36,
+                color: Color(0xFFEF5858),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            const Text.rich(
+              TextSpan(
+                text: 'Hello', // default text style
+                children: <TextSpan>[
+                  TextSpan(
+                      text: ' Lorem ipsum dolor sit amet ',
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal)),
+                ],
+              ),
+            ),
                   const Text.rich(
                     TextSpan(
                       text: 'Hello', // default text style
@@ -118,11 +131,14 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Text("All Right Reserved @2021",
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
+                  Text(
+              "All Right Reserved @2021",
+              style: TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
                   SizedBox(
                     height: 30,
                   ),
